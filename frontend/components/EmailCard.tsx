@@ -1,5 +1,6 @@
 import { Badge } from './ui/badge'
 import { Mail, Calendar } from 'lucide-react'
+import { getBadgeVariant } from '../utils/badgeUtils'
 
 export interface Email {
   id: string;
@@ -13,15 +14,6 @@ export interface Email {
 
 export default function EmailCard({ email, onClick }: { email: Email; key?: any; onClick?: () => void }) {
   const { from, subject, snippet, category, date } = email || {};
-  
-  const getBadgeVariant = (cat: string) => {
-    const normalized = cat.toLowerCase();
-    if (normalized.includes('important') || normalized.includes('urgent')) return 'important';
-    if (normalized.includes('marketing') || normalized.includes('promo')) return 'marketing';
-    if (normalized.includes('spam') || normalized.includes('junk')) return 'spam';
-    if (normalized.includes('work')) return 'work';
-    return 'default';
-  };
 
   return (
     <div className="email-card cursor-pointer group hover:bg-blue-50/50 transition-colors" onClick={onClick}>

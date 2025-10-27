@@ -3,4 +3,5 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 export { Input } from './input'
 export { Badge, badgeVariants } from './badge'
 export { Select } from './select'
+export { Toast } from './toast'
 

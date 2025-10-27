@@ -7,6 +7,7 @@ import { Badge } from '../components/ui/badge'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '../components/ui/dialog'
 import { Card, CardContent } from '../components/ui/card'
 import { RefreshCw, Sparkles, Inbox, Loader2, Mail, Calendar, X, User, LogOut } from 'lucide-react'
+import { getBadgeVariant } from '../utils/badgeUtils'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000'
 
@@ -149,15 +150,6 @@ export default function EmailsPage() {
     setFullEmailContent(null)
     fetchEmailContent(email.id)
   }
-
-  const getBadgeVariant = (cat: string) => {
-    const normalized = cat?.toLowerCase() || '';
-    if (normalized.includes('important') || normalized.includes('urgent')) return 'important';
-    if (normalized.includes('marketing') || normalized.includes('promo')) return 'marketing';
-    if (normalized.includes('spam') || normalized.includes('junk')) return 'spam';
-    if (normalized.includes('work')) return 'work';
-    return 'default';
-  };
 
   if (checkingAuth) {
     return (
