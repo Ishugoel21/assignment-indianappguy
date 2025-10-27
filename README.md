@@ -1,5 +1,3 @@
-# Gmail Email Classifier
-
 A full-stack application that integrates with Gmail to fetch emails and classify them using OpenAI GPT-4o into categories such as Important, Promotions, Social, Marketing, Spam, and General.
 
 ## Table of Contents
@@ -137,36 +135,7 @@ npm run dev
 
 The frontend will start on `http://localhost:3000`
 
-## Project Structure
-
-```
-.
-├── index.js                 # Backend entry point
-├── package.json             # Backend dependencies
-├── .env                     # Backend environment variables
-├── sessions/                # Session storage directory
-├── src/
-│   └── routes/
-│       ├── auth.js         # Authentication routes
-│       └── email.js        # Email fetching and classification routes
-└── frontend/
-    ├── pages/
-    │   ├── index.tsx       # Home/login page
-    │   ├── emails.tsx      # Email list and preview page
-    │   └── auth/           # OAuth callback pages
-    ├── components/
-    │   ├── EmailCard.tsx   # Email card component
-    │   ├── Layout.tsx      # Main layout
-    │   ├── Navbar.tsx      # Navigation bar
-    │   └── ui/             # Reusable UI components
-    ├── lib/
-    │   └── utils.ts        # Utility functions
-    ├── styles/
-    │   └── globals.css     # Global styles
-    └── package.json        # Frontend dependencies
-```
-
-## API Endpoints
+# API Endpoints
 
 ### Authentication
 
