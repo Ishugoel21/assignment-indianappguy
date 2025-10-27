@@ -1,5 +1,3 @@
-# Gmail Email Classifier
-
 A full-stack application that integrates with Gmail to fetch emails and classify them using OpenAI GPT-4o into categories such as Important, Promotions, Social, Marketing, Spam, and General.
 
 ## Table of Contents
