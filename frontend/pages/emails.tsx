@@ -321,7 +321,7 @@ export default function EmailsPage() {
                         </div>
                       </div>
                       {selectedEmail.category && (
-                        <Badge variant={getBadgeVariant(selectedEmail.category)}>
+                        <Badge variant={getBadgeVariant(selectedEmail.category) as any}>
                           {selectedEmail.category}
                         </Badge>
                       )}
@@ -373,7 +373,7 @@ export default function EmailsPage() {
                         </div>
                       </div>
                       {selectedEmail.category && (
-                        <Badge variant={getBadgeVariant(selectedEmail.category)}>
+                        <Badge variant={getBadgeVariant(selectedEmail.category) as any}>
                           {selectedEmail.category}
                         </Badge>
                       )}
